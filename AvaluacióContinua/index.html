@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos.css">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Metamorphous&display=swap" rel="stylesheet">
+  <title>Tienda</title>
+</head>
+
+<body>
+  <main>
+    <nav class="menu">
+      <a href="index.html"><img src="img/casa_kholin.svg" alt="Logo" class="logo"></a>
+      <ul>
+        <li><a href="#producto">Productos</a></li>
+        <li><a href="#carrito">Carrito</a></li>
+        <li><a href="#startup">Startup</a></li>
+      </ul>
+    </nav>
+    <header id="inicio">
+      <h1>LA TIENDA DE LOS REYES</h1>
+      <p>Objetos y reliquias de Roshar</p>
+    </header>
+    <h2 id="producto">MÁS VENDIDOS</h2>
+    <section class="productos">
+
+      <div class="card">
+        <img src="img/armadura.jpg" alt="Esferas">
+        <h3>Armadura Esquirlada</h3>
+        <p>Protección para los guerreros más poderosos.</p>
+        <span>300 esferas</span>
+        <label for="cantidadArmadura">Cantidad:</label>
+        <input type="number" id="cantidadArmadura" min="1" placeholder="Escoge la cantidad">
+        <button id="btnArmadura">Comprar</button>
+        <div id="mensajeArmadura"></div>
+      </div>
+
+      <div class="card">
+        <img src="img/espada.jpg" alt="Espada Esquirlada">
+        <h3>Espada Esquirlada</h3>
+        <p>Hoja capaz de cortar cualquier material.</p>
+        <span>300 esferas</span>
+        <label for="cantidadEspada">Cantidad:</label>
+        <input type="number" id="cantidadEspada" min="1" placeholder="Escoge la cantidad">
+        <button id="btnEspada">Comprar</button>
+        <div id="mensajeEspada"></div>
+      </div>
+
+      <div class="card">
+        <img src="img/moldeador-de-almas.jpg" alt="Libro">
+        <h3>Moldeador de almas</h3>
+        <p>Transforma materiales mediante luz tormentosa.</p>
+        <span>150 esferas</span>
+        <label for="cantidadMoldeador">Cantidad:</label>
+        <input type="number" id="cantidadMoldeador" min="1" placeholder="Escoge la cantidad">
+        <button id="btnMoldeador">Comprar</button>
+        <div id="mensajeMoldeador"></div>
+      </div>
+
+      <div class="card">
+        <img src="img/mapa-roshar.jpg" alt="Libro">
+        <h3>Mapa de Roshar</h3>
+        <p>Mapa detallado de los reinos de Roshar.</p>
+        <span>3 esferas</span>
+        <label for="cantidadRoshar">Cantidad:</label>
+        <input type="number" id="cantidadRoshar" min="1" placeholder="Escoge la cantidad">
+        <button id="btnRoshar" >Comprar</button>
+        <div id="mensajeRoshar"></div>
+      </div>
+
+      <div class="card">
+        <img src="img/llanuras-quebradas.jpg" alt="Libro">
+        <h3>Mapa: Llanuras Quebradas</h3>
+        <p>Guía esencial para recorrer las Llanuras Quebradas.</p>
+        <span>2 esferas</span>
+        <label for="cantidadLlanuras">Cantidad:</label>
+        <input type="number" id="cantidadLlanuras" min="1" placeholder="Escoge la cantidad">
+        <button id="btnLlanuras" >Comprar</button>
+        <div id="mensajeLlanuras"></div>
+      </div>
+
+      <div class="card">
+        <img src="img/mapa-kholinar.jpg" alt="Libro">
+        <h3>Mapa de Kholinar</h3>
+        <p>Mapa de la capital de Alezkar.</p>
+        <span>2 esferas</span>
+        <label for="cantidadKholinar">Cantidad:</label>
+        <input type="number" id="cantidadKholinar" min="1" placeholder="Escoge la cantidad">
+        <button id="btnKholinar">Comprar</button>
+        <div id="mensajeKholinar"></div>
+      </div>
+
+      <div class="card">
+        <img src="img/dibujos.jpg" alt="Libro">
+        <h3>Sketchbook de Shallan</h3>
+        <p>Bocetos de criaturas y plantas de Roshar</p>
+        <span>16 esferas</span>
+        <label for="cantidadDibujos">Cantidad:</label>
+        <input type="number" id="cantidadDibujos" min="1" placeholder="Escoge la cantidad">
+        <button id="btnDibujos">Comprar</button>
+        <div id="mensajeDibujos"></div>
+      </div>
+
+      <div class="card">
+        <img src="img/linterna.jpg" alt="Libro">
+        <h3>Linterna de esferas</h3>
+        <p>Herramienta esencial para los exploradores.</p>
+        <span>8 esferas</span>
+        <label for="cantidadLinterna">Cantidad:</label>
+        <input type="number" id="cantidadLinterna" min="1" placeholder="Escoge la cantidad">
+        <button id="btnLinterna">Comprar</button>
+        <div id="mensajeLinterna"></div>
+      </div>
+    </section>
+    <section id="carrito" class="carrito-panel">
+      <h2>🛒 Carrito</h2>
+
+      <ul id="listaCarrito"></ul>
+
+      <p><strong>Total de productos:</strong> <span id="totalProductos">0</span></p>
+
+      <button id="vaciarCarrito">Vaciar carrito</button>
+      <button id="comprarCarrito">Comprar</button>
+    </section>
+    <section class="carrousel" id="startup">
+      <div id="carouselExampleCaptions" class="carousel slide">
+
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+            aria-label="Slide 4"></button>
+        </div>
+
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <img src="img/kaladin.jpg" class="d-block w-100" alt="Kaladin">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Kaladin Bendito por la Tormenta</h5>
+              <p>Supervisa los pedidos y la atención al cliente.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="img/shallan.jpg" class="d-block w-100" alt="Shallan">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Shallan Davar</h5>
+              <p>Crea los diseños y nuevas colecciones.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="img/dalinar.jpg" class="d-block w-100" alt="Dalinar">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Dalinar Kholin</h5>
+              <p>Director de la empresa.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="img/szeth.jpg" class="d-block w-100" alt="Szeth-hijo-hijo-Vallano">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Szeth-hijo-hijo-Vallano</h5>
+              <p>Gestiona el almacén y los envíos.</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+
+      </div>
+      <div class="texto">
+        <h2>Viaje antes que destino.</h2>
+        <p>
+          Nos especializamos en productos para tu viaje
+          por Roshar. Encontrarás todo lo necesario para sobrevivir
+          a las Altas Tormentas.
+        </p>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-info">
+        <h3>La Tienda de los Reyes</h3>
+        <p>Objetos y reliquias de Roshar.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#producto">Productos</a>
+        <a href="#startup">Startup</a>
+      </div>
+
+      <div class="derechos-reservados">
+        <p>© 2026 | La Tienda de los Reyes.</p>
+      </div>
+    </footer>
+  </main>
+  
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" id="contenedorToasts">
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
